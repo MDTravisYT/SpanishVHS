@@ -149,9 +149,9 @@ RAMEnd:
 SRAMSupport:               
                 dc.b    '                '
 Notes:                
-                dc.b    '                                                '
+                dc.b    'For you Hidden Palace people, this is by MDTravi'
 Region:                
-                dc.b    'JUE             '
+                dc.b    's. Stop the hoax and the kid spreading this!'
 ;-------------------------------------------------------------------------------                                
 ErrorTrap:                                                     ; Offset_0x000200
                 nop                                                             
