@@ -9250,7 +9250,7 @@ Offset_0x007B78:
                 move.w  #$29D0, Obj_X(A1)                                ; $0008
                 move.w  #$0426, Obj_Y(A1)                                ; $000C
 Offset_0x007BAC:
-                move.w  #$008E, D0
+                move.w  #$0093, D0
                 bsr     Play_Music                             ; Offset_0x00150C
                 move.b  #$02, (Boss_Flag).w                          ; $FFFFF7AA
                 moveq   #$29, D0
