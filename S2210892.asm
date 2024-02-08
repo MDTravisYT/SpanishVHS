@@ -18772,7 +18772,12 @@ Touch_Hurt:                                                    ; Offset_0x02B4D4
                 move.l  A1, A2            
 ;-------------------------------------------------------------------------------
 Hurt_Player:                                                   ; Offset_0x02B4DE                          
-                tst.b   (Shield_Flag).w                              ; $FFFFFE2C
+                cmpa.w  #Obj_Memory_Address, A0                          ; $B000
+                beq.s   Hurt_Player_D0                         ; Offset_0x038380		
+                 tst.w   (Two_Player_Flag).w                          ; $FFFFFFD8
+                beq.s   Offset_0x0383B0
+Hurt_Player_D0:                                                ; Offset_0x038380
+                btst    #$00, Obj_Player_Status(A0)                      ; $002B					
                 bne.s   Hurt_Shield                            ; Offset_0x02B506
                 tst.w   (Ring_Count).w                               ; $FFFFFE20
                 beq     Hurt_NoRings                           ; Offset_0x02B574
@@ -18782,7 +18787,8 @@ Hurt_Player:                                                   ; Offset_0x02B4DE
                 move.w  Obj_X(A0), Obj_X(A1)                      ; $0008, $0008
                 move.w  Obj_Y(A0), Obj_Y(A1)                      ; $000C, $000C
 Hurt_Shield                                                    ; Offset_0x02B506
-                move.b  #$00, (Shield_Flag).w                        ; $FFFFFE2C
+                bclr    #$00, Obj_Player_Status(A0)                      ; $002B
+Offset_0x0383B0:
                 move.b  #$04, Obj_Routine(A0)                            ; $0024
                 bsr     Jmp_00_To_Sonic_ResetOnFloor           ; Offset_0x02B72C
                 bset    #$01, Obj_Status(A0)                             ; $0022
