@@ -217,7 +217,7 @@ Offset_0x012832:
                 cmpi.w  #$000C, D0
                 bhi.s   Offset_0x0128BC
                 bne.s   Offset_0x01289E
-                move.w  #$008A, D0
+                move.w  #$009F, D0
                 jsr     (Play_Music)                           ; Offset_0x00150C
 Offset_0x01289E:
                 subq.b  #$01, Obj_Control_Var_06(A0)                     ; $0032

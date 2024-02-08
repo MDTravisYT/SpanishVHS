@@ -27273,10 +27273,9 @@ Offset_0x0EC0DA:
                 rts    
 ;-------------------------------------------------------------------------------
 Z80_Sound_Driver:                                              ; Offset_0x0EC0DC
-                incbin  'data\sounds\snd_drv.sax'     
+                incbin  'data\sounds\snd_drv.dat'        
 ;-------------------------------------------------------------------------------  
-;                cnop    $00000000, $000ED000, $00000000    
-                 align   $ED000 
+                cnop    $000000, $0ED000      
 DAC_Sample_00:                                                 ; Offset_0x0ED000  
                 incbin  'data\sounds\DAC_00.bin'
 DAC_Sample_01:                                                 ; Offset_0x0ED294 
@@ -27292,69 +27291,69 @@ DAC_Sample_05:                                                 ; Offset_0x0EF2F0
 DAC_Sample_06:                                                 ; Offset_0x0EFA3C  
                 incbin  'data\sounds\DAC_06.bin' 
 ;-------------------------------------------------------------------------------
-Music_81_Ptr equ (Music_Versus_Result_Final&$FFFF)|$8000  
-Music_82_Ptr equ (Music_Green_Hill&$FFFF)|$8000  
-Music_83_Ptr equ (Music_Hidden_Palace_Beta&$FFFF)|$8000  
-Music_84_Ptr equ (Music_Oil_Ocean_Final&$FFFF)|$8000  
-Music_85_Ptr equ (Music_Metropolis&$FFFF)|$8000  
-Music_86_Ptr equ (Music_Hill_Top&$FFFF)|$8000  
-Music_87_Ptr equ (Music_Neo_Green_Hill&$FFFF)|$8000  
-Music_88_Ptr equ (Music_Oil_Ocean_Beta&$FFFF)|$8000  
-Music_89_Ptr equ (Music_Casino_Night&$FFFF)|$8000  
-Music_8A_Ptr equ (Music_Death_Egg&$FFFF)|$8000  
-Music_8B_Ptr equ (Music_Dust_Hill&$FFFF)|$8000  
-Music_8C_Ptr equ (Music_Green_Hill_Versus_Final&$FFFF)|$8000  
-Music_8D_Ptr equ (Music_Sky_Chase&$FFFF)|$8000  
-Music_8E_Ptr equ (Music_Chemical_Plant&$FFFF)|$8000  
-Music_8F_Ptr equ (Music_Sky_Fortress&$FFFF)|$8000  
-Music_90_Ptr equ (Music_Hidden_Palace_Final&$FFFF)|$8000
-Music_91_Ptr equ (Music_Level_Select_Menu&$FFFF)|$8000  
-Music_92_Ptr equ (Music_Special_Stage&$FFFF)|$8000  
-Music_93_Ptr equ (Music_Level_Boss&$FFFF)|$8000  
-Music_94_Ptr equ (Music_Final_Boss&$FFFF)|$8000  
-Music_95_Ptr equ (Music_End_Sequence&$FFFF)|$8000  
-Music_96_Ptr equ (Music_Super_Sonic&$FFFF)|$8000    
-Music_97_Ptr equ (Music_Invencibility&$FFFF)|$8000  
-Music_98_Ptr equ (Music_Extra_Life&$FFFF)|$8000  
-Music_99_Ptr equ (Music_Title_Screen&$FFFF)|$8000  
-Music_9A_Ptr equ (Music_Level_Results&$FFFF)|$8000  
-Music_9B_Ptr equ (Music_Time_Over_Game_Over&$FFFF)|$8000  
-Music_9C_Ptr equ (Music_Continue&$FFFF)|$8000  
-Music_9D_Ptr equ (Music_Get_Emerald&$FFFF)|$8000  
-Music_9E_Ptr equ (Music_Hidden_Palace_Final&$FFFF)|$8000  
-;-------------------------------------------------------------------------------               
-                dc.w    (((Music_97_Ptr>>$08)|(Music_97_Ptr<<$08))&$FFFF) 
+Music_00_Ptr equ  (Music_00&$FFFF)|$8000  
+Music_02_Ptr equ  (Music_02&$FFFF)|$8000  
+Music_03_Ptr equ  (Music_03&$FFFF)|$8000  
+Music_04_Ptr equ  (Music_04&$FFFF)|$8000  
+Music_05_Ptr equ  (Music_05&$FFFF)|$8000  
+Music_06_Ptr equ  (Music_06&$FFFF)|$8000 
+
+Music_81_Ptr equ  (Music_Versus_Result_Final&$FFFF)|$8000  
+Music_82_Ptr equ  (Music_Green_Hill&$FFFF)|$8000  
+Music_83_Ptr equ  (Music_Hidden_Palace_Beta&$FFFF)|$8000  
+Music_84_Ptr equ  (Music_Oil_Ocean_Final&$FFFF)|$8000  
+Music_85_Ptr equ  (Music_Metropolis&$FFFF)|$8000  
+Music_86_Ptr equ  (Music_Hill_Top&$FFFF)|$8000  
+Music_87_Ptr equ  (Music_Neo_Green_Hill&$FFFF)|$8000  
+Music_88_Ptr equ  (Music_Oil_Ocean_Beta&$FFFF)|$8000  
+Music_89_Ptr equ  (Music_Casino_Night&$FFFF)|$8000  
+Music_8A_Ptr equ  (Music_Death_Egg&$FFFF)|$8000  
+Music_8B_Ptr equ  (Music_Dust_Hill&$FFFF)|$8000  
+Music_8C_Ptr equ  (Music_Green_Hill_Versus_Final&$FFFF)|$8000  
+Music_8D_Ptr equ  (Music_Sky_Chase&$FFFF)|$8000  
+Music_8E_Ptr equ  (Music_Chemical_Plant&$FFFF)|$8000  
+Music_8F_Ptr equ  (Music_Sky_Fortress&$FFFF)|$8000  
+Music_90_Ptr equ  (Music_Hidden_Palace_Final&$FFFF)|$8000  
+Music_91_Ptr equ  (Music_Level_Select_Menu&$FFFF)|$8000  
+Music_92_Ptr equ  (Music_Special_Stage&$FFFF)|$8000  
+Music_93_Ptr equ  (Music_Level_Boss&$FFFF)|$8000  
+Music_94_Ptr equ  (Music_Final_Boss&$FFFF)|$8000  
+Music_95_Ptr equ  (Music_End_Sequence&$FFFF)|$8000  
+Music_96_Ptr equ  (Music_Super_Sonic&$FFFF)|$8000  
+Music_97_Ptr equ  (Music_Invencibility&$FFFF)|$8000  
+Music_98_Ptr equ  (Music_Extra_Life&$FFFF)|$8000  
+Music_99_Ptr equ  (Music_Title_Screen&$FFFF)|$8000  
+Music_9A_Ptr equ  (Music_Level_Results&$FFFF)|$8000  
+Music_9B_Ptr equ  (Music_Time_Over_Game_Over&$FFFF)|$8000  
+Music_9C_Ptr equ  (Music_Continue&$FFFF)|$8000  
+Music_9D_Ptr equ  (Music_Get_Emerald&$FFFF)|$8000  
+Music_9E_Ptr equ  (Music_Credits&$FFFF)|$8000  
+Music_9F_Ptr equ  (Music_Panic&$FFFF)|$8000     
+;-------------------------------------------------------------------------------   
+Music_81_To_87:                                                ; Offset_0x0F0000                
                 dc.w    (((Music_98_Ptr>>$08)|(Music_98_Ptr<<$08))&$FFFF) 
-                dc.w    (((Music_99_Ptr>>$08)|(Music_99_Ptr<<$08))&$FFFF) 
-                dc.w    (((Music_9A_Ptr>>$08)|(Music_9A_Ptr<<$08))&$FFFF) 
-                dc.w    (((Music_9B_Ptr>>$08)|(Music_9B_Ptr<<$08))&$FFFF) 
-                dc.w    (((Music_9C_Ptr>>$08)|(Music_9C_Ptr<<$08))&$FFFF) 
-                dc.w    (((Music_9D_Ptr>>$08)|(Music_9D_Ptr<<$08))&$FFFF) 
-                dc.w    (((Music_90_Ptr>>$08)|(Music_90_Ptr<<$08))&$FFFF) 
-                dc.w    (((Music_9E_Ptr>>$08)|(Music_9E_Ptr<<$08))&$FFFF)               
-Music_Invencibility:                                           ; Offset_0x0F0012
-                incbin  'data\sounds\invcb_97.snd' 
-Music_Extra_Life:                                              ; Offset_0x0F023D
-                incbin  'data\sounds\1up_98.snd'     
-Music_Title_Screen:                                            ; Offset_0x0F032A
-                incbin  'data\sounds\tscr_99.snd'   
-Music_Level_Results:                                           ; Offset_0x0F04FF
-                incbin  'data\sounds\lres_9A.snd'   
-Music_Time_Over_Game_Over:                                     ; Offset_0x0F0654
-                incbin  'data\sounds\tgovr_9B.snd'   
-Music_Continue:                                                ; Offset_0x0F07A3
+                dc.w    (((Music_9C_Ptr>>$08)|(Music_9C_Ptr<<$08))&$FFFF)
+                dc.w    (((Music_9D_Ptr>>$08)|(Music_9D_Ptr<<$08))&$FFFF)
+                dc.w    (((Music_90_Ptr>>$08)|(Music_90_Ptr<<$08))&$FFFF)
+                dc.w    (((Music_9F_Ptr>>$08)|(Music_9F_Ptr<<$08))&$FFFF)
+                dc.w    (((Music_9E_Ptr>>$08)|(Music_9E_Ptr<<$08))&$FFFF)
+Music_Extra_Life:                                              ; Offset_0x0F000C
+                incbin  'data\sounds\1up_98.snd'
+Music_Continue:                                                ; Offset_0x0F00F9
                 incbin  'data\sounds\cont_9c.snd'  
-Music_Get_Emerald:                                             ; Offset_0x0F0900
-                incbin  'data\sounds\emrld_9d.snd'    
-Music_Hidden_Palace_Final:                                     ; Offset_0x0F09CE
-                incbin  'data\sounds\hpz_90.snd'                  
+Music_Get_Emerald:                                             ; Offset_0x0F0256
+                incbin  'data\sounds\emrld_9d.snd'
+Music_Hidden_Palace_Final:                                     ; Offset_0x0F0324
+                incbin  'data\sounds\hpz_90.snd'  
+Music_Panic:                                                   ; Offset_0x0F0583
+                incbin  'data\sounds\pnc_9f.snd'  
+Music_Credits:                                                 ; Offset_0x0F06AD
+                incbin  'data\sounds\credt_9e.snd'
 ;-------------------------------------------------------------------------------                                                    
 ;                cnop    $00000000, $000F1E8C, $00000000
-                 align   $F1E8C                 
-;-------------------------------------------------------------------------------                
+                 align   $F1E8C
 Sega_Snd:                                                      ; Offset_0x0F1E8C               
-                incbin  'data\sounds\sega.snd'                                                                                                     
-;-------------------------------------------------------------------------------
+                incbin  'data\sounds\sega.snd'    
                 dc.w    (((Music_88_Ptr>>$08)|(Music_88_Ptr<<$08))&$FFFF) 
                 dc.w    (((Music_82_Ptr>>$08)|(Music_82_Ptr<<$08))&$FFFF) 
                 dc.w    (((Music_85_Ptr>>$08)|(Music_85_Ptr<<$08))&$FFFF) 
@@ -27376,128 +27375,139 @@ Sega_Snd:                                                      ; Offset_0x0F1E8C
                 dc.w    (((Music_81_Ptr>>$08)|(Music_81_Ptr<<$08))&$FFFF) 
                 dc.w    (((Music_96_Ptr>>$08)|(Music_96_Ptr<<$08))&$FFFF) 
                 dc.w    (((Music_86_Ptr>>$08)|(Music_86_Ptr<<$08))&$FFFF) 
-Music_Oil_Ocean_Beta:                                          ; Offset_0x0F802A
-                incbin  'data\sounds\ooz_88.snd' 
-Music_Green_Hill:                                              ; Offset_0x0F85AC
-                incbin  'data\sounds\ghz_82.snd' 
-Music_Metropolis:                                              ; Offset_0x0F8D1E
-                incbin  'data\sounds\mz_85.snd'     
-Music_Casino_Night:                                            ; Offset_0x0F9299
-                incbin  'data\sounds\cnz_89.snd'   
-Music_Dust_Hill:                                               ; Offset_0x0F99B6
+                dc.w    (((Music_97_Ptr>>$08)|(Music_97_Ptr<<$08))&$FFFF) 
+                dc.w    (((Music_99_Ptr>>$08)|(Music_99_Ptr<<$08))&$FFFF) 
+                dc.w    (((Music_9A_Ptr>>$08)|(Music_9A_Ptr<<$08))&$FFFF)                
+                dc.w    (((Music_9B_Ptr>>$08)|(Music_9B_Ptr<<$08))&$FFFF) 
+Music_Oil_Ocean_Beta:                                          ; Offset_0x0F8032
+                incbin  'data\sounds\ooz_88.snd'  
+Music_Green_Hill:                                              ; Offset_0x0F85B4
+                incbin  'data\sounds\ghz_82.snd'  
+Music_Metropolis:                                              ; Offset_0x0F8D26
+                incbin  'data\sounds\mz_85.snd' 
+Music_Casino_Night:                                            ; Offset_0x0F92A1
+                incbin  'data\sounds\cnz_89.snd'  
+Music_Dust_Hill:                                               ; Offset_0x0F99BE
                 incbin  'data\sounds\dhz_8b.snd'   
-Music_Hidden_Palace_Beta:                                      ; Offset_0x0FA056
-                incbin  'data\sounds\hpz_83.snd'   
-Music_Neo_Green_Hill:                                          ; Offset_0x0FA54F
+Music_Hidden_Palace_Beta:                                      ; Offset_0x0FA05E
+                incbin  'data\sounds\hpz_83.snd'  
+Music_Neo_Green_Hill:                                          ; Offset_0x0FA541
                 incbin  'data\sounds\nghz_87.snd' 
-Music_Death_Egg:                                               ; Offset_0x0FACDC
-                incbin  'data\sounds\dez_8a.snd'   
-Music_Special_Stage:                                           ; Offset_0x0FB1C3
-                incbin  'data\sounds\ss_92.snd' 
-Music_Level_Select_Menu:                                       ; Offset_0x0FB7CA
-                incbin  'data\sounds\menu_91.snd'  
-Music_End_Sequence:                                            ; Offset_0x0FB945
-                incbin  'data\sounds\endsq_95.snd'   
-Music_Final_Boss:                                              ; Offset_0x0FBF3E
+Music_Death_Egg:                                               ; Offset_0x0FACCE
+                incbin  'data\sounds\dez_8a.snd'    
+Music_Special_Stage:                                           ; Offset_0x0FB1B5
+                incbin  'data\sounds\ss_92.snd'   
+Music_Level_Select_Menu:                                       ; Offset_0x0FB7BC
+                incbin  'data\sounds\menu_91.snd'   
+Music_End_Sequence:                                            ; Offset_0x0FB937
+                incbin  'data\sounds\endsq_95.snd'     
+Music_Final_Boss:                                              ; Offset_0x0FBF30
                 incbin  'data\sounds\dezfb_94.snd'  
-Music_Chemical_Plant:                                          ; Offset_0x0FC276
+Music_Chemical_Plant:                                          ; Offset_0x0FC268
                 incbin  'data\sounds\cpz_8e.snd'     
-Music_Level_Boss:                                              ; Offset_0x0FC8C1
-                incbin  'data\sounds\boss_93.snd'   
-Music_Sky_Chase:                                               ; Offset_0x0FCB93
-                incbin  'data\sounds\scz_8d.snd'  
-Music_Oil_Ocean_Final:                                         ; Offset_0x0FCF96
-                incbin  'data\sounds\ooz_84.snd'   
-Music_Sky_Fortress:                                            ; Offset_0x0FD41A
-                incbin  'data\sounds\sfz_8f.snd'
-Music_Green_Hill_Versus_Final:                                 ; Offset_0x0FD847
-                incbin  'data\sounds\ghzvs_8c.snd'  
-Music_Versus_Result_Final:                                     ; Offset_0x0FDD60
-                incbin  'data\sounds\vsres_81.snd'      
-Music_Super_Sonic:                                             ; Offset_0x0FE1C3
-                incbin  'data\sounds\super_96.snd'                                                                                                                                                                                                                                                                                                             
-Music_Hill_Top:                                                ; Offset_0x0FE4B6
-                incbin  'data\sounds\htz_86.snd'       
-;-------------------------------------------------------------------------------                                                    
-;                cnop    $00000000, $000FEE00, $00000000
-                 align   $FEE00
-;------------------------------------------------------------------------------- 
-Sfx_A0_Ptr equ (Sfx_A0&$FFFF)|$8000   
-Sfx_A1_Ptr equ (Sfx_A1&$FFFF)|$8000    
-Sfx_A2_Ptr equ (Sfx_A2&$FFFF)|$8000    
-Sfx_A3_Ptr equ (Sfx_A3&$FFFF)|$8000  
-Sfx_A4_Ptr equ (Sfx_A4&$FFFF)|$8000 
-Sfx_A5_Ptr equ (Sfx_A5&$FFFF)|$8000  
-Sfx_A6_Ptr equ (Sfx_A6&$FFFF)|$8000   
-Sfx_A7_Ptr equ (Sfx_A7&$FFFF)|$8000    
-Sfx_A8_Ptr equ (Sfx_A8&$FFFF)|$8000    
-Sfx_A9_Ptr equ (Sfx_A9&$FFFF)|$8000  
-Sfx_AA_Ptr equ (Sfx_AA&$FFFF)|$8000 
-Sfx_AB_Ptr equ (Sfx_AB&$FFFF)|$8000  
-Sfx_AC_Ptr equ (Sfx_AC&$FFFF)|$8000   
-Sfx_AD_Ptr equ (Sfx_AD&$FFFF)|$8000    
-Sfx_AE_Ptr equ (Sfx_AE&$FFFF)|$8000    
-Sfx_AF_Ptr equ (Sfx_AF&$FFFF)|$8000  
-Sfx_B0_Ptr equ (Sfx_B0&$FFFF)|$8000 
-Sfx_B1_Ptr equ (Sfx_B1&$FFFF)|$8000  
-Sfx_B2_Ptr equ (Sfx_B2&$FFFF)|$8000   
-Sfx_B3_Ptr equ (Sfx_B3&$FFFF)|$8000    
-Sfx_B4_Ptr equ (Sfx_B4&$FFFF)|$8000    
-Sfx_B5_Ptr equ (Sfx_B5&$FFFF)|$8000  
-Sfx_B6_Ptr equ (Sfx_B6&$FFFF)|$8000 
-Sfx_B7_Ptr equ (Sfx_B7&$FFFF)|$8000  
-Sfx_B8_Ptr equ (Sfx_B8&$FFFF)|$8000    
-Sfx_B9_Ptr equ (Sfx_B9&$FFFF)|$8000  
-Sfx_BA_Ptr equ (Sfx_BA&$FFFF)|$8000 
-Sfx_BB_Ptr equ (Sfx_BB&$FFFF)|$8000  
-Sfx_BC_Ptr equ (Sfx_BC&$FFFF)|$8000   
-Sfx_BD_Ptr equ (Sfx_BD&$FFFF)|$8000    
-Sfx_BE_Ptr equ (Sfx_BE&$FFFF)|$8000    
-Sfx_BF_Ptr equ (Sfx_BF&$FFFF)|$8000 
-Sfx_C0_Ptr equ (Sfx_C0&$FFFF)|$8000 
-Sfx_C1_Ptr equ (Sfx_C1&$FFFF)|$8000  
-Sfx_C2_Ptr equ (Sfx_C2&$FFFF)|$8000   
-Sfx_C3_Ptr equ (Sfx_C3&$FFFF)|$8000    
-Sfx_C4_Ptr equ (Sfx_C4&$FFFF)|$8000    
-Sfx_C5_Ptr equ (Sfx_C5&$FFFF)|$8000  
-Sfx_C6_Ptr equ (Sfx_C6&$FFFF)|$8000 
-Sfx_C7_Ptr equ (Sfx_C7&$FFFF)|$8000  
-Sfx_C8_Ptr equ (Sfx_C8&$FFFF)|$8000    
-Sfx_C9_Ptr equ (Sfx_C9&$FFFF)|$8000  
-Sfx_CA_Ptr equ (Sfx_CA&$FFFF)|$8000 
-Sfx_CB_Ptr equ (Sfx_CB&$FFFF)|$8000  
-Sfx_CC_Ptr equ (Sfx_CC&$FFFF)|$8000   
-Sfx_CD_Ptr equ (Sfx_CD&$FFFF)|$8000    
-Sfx_CE_Ptr equ (Sfx_CE&$FFFF)|$8000    
-Sfx_CF_Ptr equ (Sfx_CF&$FFFF)|$8000 
-Sfx_D0_Ptr equ (Sfx_D0&$FFFF)|$8000 
-Sfx_D1_Ptr equ (Sfx_D1&$FFFF)|$8000  
-Sfx_D2_Ptr equ (Sfx_D2&$FFFF)|$8000   
-Sfx_D3_Ptr equ (Sfx_D3&$FFFF)|$8000    
-Sfx_D4_Ptr equ (Sfx_D4&$FFFF)|$8000    
-Sfx_D5_Ptr equ (Sfx_D5&$FFFF)|$8000  
-Sfx_D6_Ptr equ (Sfx_D6&$FFFF)|$8000 
-Sfx_D7_Ptr equ (Sfx_D7&$FFFF)|$8000  
-Sfx_D8_Ptr equ (Sfx_D8&$FFFF)|$8000    
-Sfx_D9_Ptr equ (Sfx_D9&$FFFF)|$8000  
-Sfx_DA_Ptr equ (Sfx_DA&$FFFF)|$8000 
-Sfx_DB_Ptr equ (Sfx_DB&$FFFF)|$8000  
-Sfx_DC_Ptr equ (Sfx_DC&$FFFF)|$8000   
-Sfx_DD_Ptr equ (Sfx_DD&$FFFF)|$8000    
-Sfx_DE_Ptr equ (Sfx_DE&$FFFF)|$8000    
-Sfx_DF_Ptr equ (Sfx_DF&$FFFF)|$8000 
-Sfx_E0_Ptr equ (Sfx_E0&$FFFF)|$8000 
-Sfx_E1_Ptr equ (Sfx_E1&$FFFF)|$8000  
-Sfx_E2_Ptr equ (Sfx_E2&$FFFF)|$8000   
-Sfx_E3_Ptr equ (Sfx_E3&$FFFF)|$8000    
-Sfx_E4_Ptr equ (Sfx_E4&$FFFF)|$8000    
-Sfx_E5_Ptr equ (Sfx_E5&$FFFF)|$8000 
-Sfx_E6_Ptr equ (Sfx_E6&$FFFF)|$8000 
-Sfx_E7_Ptr equ (Sfx_E7&$FFFF)|$8000  
-Sfx_E8_Ptr equ (Sfx_E8&$FFFF)|$8000    
-Sfx_E9_Ptr equ (Sfx_E9&$FFFF)|$8000 
+Music_Level_Boss:                                              ; Offset_0x0FC8B3
+                incbin  'data\sounds\boss_93.snd'      
+Music_Sky_Chase:                                               ; Offset_0x0FCB85
+                incbin  'data\sounds\scz_8d.snd'    
+Music_Oil_Ocean_Final:                                         ; Offset_0x0FCF88
+                incbin  'data\sounds\ooz_84.snd'     
+Music_Sky_Fortress:                                            ; Offset_0x0FD40C
+                incbin  'data\sounds\sfz_8f.snd'  
+Music_Green_Hill_Versus_Final:                                 ; Offset_0x0FD839
+                incbin  'data\sounds\ghzvs_8c.snd'    
+Music_Versus_Result_Final:                                     ; Offset_0x0FDD52
+                incbin  'data\sounds\vsres_81.snd'
+Music_Super_Sonic:                                             ; Offset_0x0FE1B5
+                incbin  'data\sounds\super_96.snd'   
+Music_Hill_Top:                                                ; Offset_0x0FE4A8
+                incbin  'data\sounds\htz_86.snd'  
+Music_Invencibility:                                           ; Offset_0x0FE930
+                incbin  'data\sounds\invcb_97.snd'                 
+Music_Title_Screen:                                            ; Offset_0x0FEAFB
+                incbin  'data\sounds\tscr_99.snd'   
+Music_Level_Results:                                           ; Offset_0x0FECED
+                incbin  'data\sounds\lres_9A.snd'                                                                                                                                                                                                                                                                                                                                          
+Music_Time_Over_Game_Over:                                     ; Offset_0x0FEE42
+                incbin  'data\sounds\tgovr_9B.snd'                                    
+;-------------------------------------------------------------------------------  
+Sfx_A0_Ptr   equ     (Sfx_A0&$FFFF)|$8000   
+Sfx_A1_Ptr   equ     (Sfx_A1&$FFFF)|$8000    
+Sfx_A2_Ptr   equ     (Sfx_A2&$FFFF)|$8000    
+Sfx_A3_Ptr   equ     (Sfx_A3&$FFFF)|$8000  
+Sfx_A4_Ptr   equ     (Sfx_A4&$FFFF)|$8000 
+Sfx_A5_Ptr   equ     (Sfx_A5&$FFFF)|$8000  
+Sfx_A6_Ptr   equ     (Sfx_A6&$FFFF)|$8000   
+Sfx_A7_Ptr   equ     (Sfx_A7&$FFFF)|$8000    
+Sfx_A8_Ptr   equ     (Sfx_A8&$FFFF)|$8000    
+Sfx_A9_Ptr   equ     (Sfx_A9&$FFFF)|$8000  
+Sfx_AA_Ptr   equ     (Sfx_AA&$FFFF)|$8000 
+Sfx_AB_Ptr   equ     (Sfx_AB&$FFFF)|$8000  
+Sfx_AC_Ptr   equ     (Sfx_AC&$FFFF)|$8000   
+Sfx_AD_Ptr   equ     (Sfx_AD&$FFFF)|$8000    
+Sfx_AE_Ptr   equ     (Sfx_AE&$FFFF)|$8000    
+Sfx_AF_Ptr   equ     (Sfx_AF&$FFFF)|$8000  
+Sfx_B0_Ptr   equ     (Sfx_B0&$FFFF)|$8000 
+Sfx_B1_Ptr   equ     (Sfx_B1&$FFFF)|$8000  
+Sfx_B2_Ptr   equ     (Sfx_B2&$FFFF)|$8000   
+Sfx_B3_Ptr   equ     (Sfx_B3&$FFFF)|$8000    
+Sfx_B4_Ptr   equ     (Sfx_B4&$FFFF)|$8000    
+Sfx_B5_Ptr   equ     (Sfx_B5&$FFFF)|$8000  
+Sfx_B6_Ptr   equ     (Sfx_B6&$FFFF)|$8000 
+Sfx_B7_Ptr   equ     (Sfx_B7&$FFFF)|$8000  
+Sfx_B8_Ptr   equ     (Sfx_B8&$FFFF)|$8000    
+Sfx_B9_Ptr   equ     (Sfx_B9&$FFFF)|$8000  
+Sfx_BA_Ptr   equ     (Sfx_BA&$FFFF)|$8000 
+Sfx_BB_Ptr   equ     (Sfx_BB&$FFFF)|$8000  
+Sfx_BC_Ptr   equ     (Sfx_BC&$FFFF)|$8000   
+Sfx_BD_Ptr   equ     (Sfx_BD&$FFFF)|$8000    
+Sfx_BE_Ptr   equ     (Sfx_BE&$FFFF)|$8000    
+Sfx_BF_Ptr   equ     (Sfx_BF&$FFFF)|$8000 
+Sfx_C0_Ptr   equ     (Sfx_C0&$FFFF)|$8000 
+Sfx_C1_Ptr   equ     (Sfx_C1&$FFFF)|$8000  
+Sfx_C2_Ptr   equ     (Sfx_C2&$FFFF)|$8000   
+Sfx_C3_Ptr   equ     (Sfx_C3&$FFFF)|$8000    
+Sfx_C4_Ptr   equ     (Sfx_C4&$FFFF)|$8000    
+Sfx_C5_Ptr   equ     (Sfx_C5&$FFFF)|$8000  
+Sfx_C6_Ptr   equ     (Sfx_C6&$FFFF)|$8000 
+Sfx_C7_Ptr   equ     (Sfx_C7&$FFFF)|$8000  
+Sfx_C8_Ptr   equ     (Sfx_C8&$FFFF)|$8000    
+Sfx_C9_Ptr   equ     (Sfx_C9&$FFFF)|$8000  
+Sfx_CA_Ptr   equ     (Sfx_CA&$FFFF)|$8000 
+Sfx_CB_Ptr   equ     (Sfx_CB&$FFFF)|$8000  
+Sfx_CC_Ptr   equ     (Sfx_CC&$FFFF)|$8000   
+Sfx_CD_Ptr   equ     (Sfx_CD&$FFFF)|$8000    
+Sfx_CE_Ptr   equ     (Sfx_CE&$FFFF)|$8000    
+Sfx_CF_Ptr   equ     (Sfx_CF&$FFFF)|$8000 
+Sfx_D0_Ptr   equ     (Sfx_D0&$FFFF)|$8000 
+Sfx_D1_Ptr   equ     (Sfx_D1&$FFFF)|$8000  
+Sfx_D2_Ptr   equ     (Sfx_D2&$FFFF)|$8000   
+Sfx_D3_Ptr   equ     (Sfx_D3&$FFFF)|$8000    
+Sfx_D4_Ptr   equ     (Sfx_D4&$FFFF)|$8000    
+Sfx_D5_Ptr   equ     (Sfx_D5&$FFFF)|$8000  
+Sfx_D6_Ptr   equ     (Sfx_D6&$FFFF)|$8000 
+Sfx_D7_Ptr   equ     (Sfx_D7&$FFFF)|$8000  
+Sfx_D8_Ptr   equ     (Sfx_D8&$FFFF)|$8000    
+Sfx_D9_Ptr   equ     (Sfx_D9&$FFFF)|$8000  
+Sfx_DA_Ptr   equ     (Sfx_DA&$FFFF)|$8000 
+Sfx_DB_Ptr   equ     (Sfx_DB&$FFFF)|$8000  
+Sfx_DC_Ptr   equ     (Sfx_DC&$FFFF)|$8000   
+Sfx_DD_Ptr   equ     (Sfx_DD&$FFFF)|$8000    
+Sfx_DE_Ptr   equ     (Sfx_DE&$FFFF)|$8000    
+Sfx_DF_Ptr   equ     (Sfx_DF&$FFFF)|$8000 
+Sfx_E0_Ptr   equ     (Sfx_E0&$FFFF)|$8000 
+Sfx_E1_Ptr   equ     (Sfx_E1&$FFFF)|$8000  
+Sfx_E2_Ptr   equ     (Sfx_E2&$FFFF)|$8000   
+Sfx_E3_Ptr   equ     (Sfx_E3&$FFFF)|$8000    
+Sfx_E4_Ptr   equ     (Sfx_E4&$FFFF)|$8000    
+Sfx_E5_Ptr   equ     (Sfx_E5&$FFFF)|$8000 
+Sfx_E6_Ptr   equ     (Sfx_E6&$FFFF)|$8000 
+Sfx_E7_Ptr   equ     (Sfx_E7&$FFFF)|$8000  
+Sfx_E8_Ptr   equ     (Sfx_E8&$FFFF)|$8000    
+Sfx_E9_Ptr   equ     (Sfx_E9&$FFFF)|$8000  
+Sfx_EA_Ptr   equ     (Sfx_EA&$FFFF)|$8000 
+Sfx_EB_Ptr   equ     (Sfx_EB&$FFFF)|$8000  
 ;-------------------------------------------------------------------------------          
-Sfx_A0_To_E9:                                                  ; Offset_0x0FEE00      
+Sfx_A0_To_F9:                                                  ; Offset_0x0FEF91      
                 dc.w    (((Sfx_A0_Ptr>>$08)|(Sfx_A0_Ptr<<$08))&$FFFF)      
                 dc.w    (((Sfx_A1_Ptr>>$08)|(Sfx_A1_Ptr<<$08))&$FFFF) 
                 dc.w    (((Sfx_A2_Ptr>>$08)|(Sfx_A2_Ptr<<$08))&$FFFF)   
@@ -27571,159 +27581,164 @@ Sfx_A0_To_E9:                                                  ; Offset_0x0FEE00
                 dc.w    (((Sfx_E6_Ptr>>$08)|(Sfx_E6_Ptr<<$08))&$FFFF)      
                 dc.w    (((Sfx_E7_Ptr>>$08)|(Sfx_E7_Ptr<<$08))&$FFFF) 
                 dc.w    (((Sfx_E8_Ptr>>$08)|(Sfx_E8_Ptr<<$08))&$FFFF)   
-                dc.w    (((Sfx_E9_Ptr>>$08)|(Sfx_E9_Ptr<<$08))&$FFFF)              
-Sfx_A0:                                                        ; Offset_0x0FEE94
+                dc.w    (((Sfx_E9_Ptr>>$08)|(Sfx_E9_Ptr<<$08))&$FFFF)
+                dc.w    (((Sfx_EA_Ptr>>$08)|(Sfx_EA_Ptr<<$08))&$FFFF) 
+                dc.w    (((Sfx_EB_Ptr>>$08)|(Sfx_EB_Ptr<<$08))&$FFFF) 
+;-------------------------------------------------------------------------------
+Sfx_A0:                                                        ; Offset_0x0FF029
                 incbin  'data\sounds\sfx_A0.snd'
-Sfx_A1:                                                        ; Offset_0x0FEEAA
+Sfx_A1:                                                        ; Offset_0x0FF03F
                 incbin  'data\sounds\sfx_A1.snd'
-Sfx_A2:                                                        ; Offset_0x0FEED4
+Sfx_A2:                                                        ; Offset_0x0FF069
                 incbin  'data\sounds\sfx_A2.snd'
-Sfx_A3:                                                        ; Offset_0x0FEEF3
+Sfx_A3:                                                        ; Offset_0x0FF088
                 incbin  'data\sounds\sfx_A3.snd'
-Sfx_A4:                                                        ; Offset_0x0FEF25
+Sfx_A4:                                                        ; Offset_0x0FF0BA
                 incbin  'data\sounds\sfx_A4.snd'
-Sfx_A5:                                                        ; Offset_0x0FEF5A
+Sfx_A5:                                                        ; Offset_0x0FF0EF
                 incbin  'data\sounds\sfx_A5.snd'
-Sfx_A6:                                                        ; Offset_0x0FEF86
+Sfx_A6:                                                        ; Offset_0x0FF11B
                 incbin  'data\sounds\sfx_A6.snd'
-Sfx_A7:                                                        ; Offset_0x0FEFB5
+Sfx_A7:                                                        ; Offset_0x0FF14A
                 incbin  'data\sounds\sfx_A7.snd'
-Sfx_A8:                                                        ; Offset_0x0FEFE4
+Sfx_A8:                                                        ; Offset_0x0FF179
                 incbin  'data\sounds\sfx_A8.snd'
-Sfx_A9:                                                        ; Offset_0x0FEFFE
+Sfx_A9:                                                        ; Offset_0x0FF193
                 incbin  'data\sounds\sfx_A9.snd'
-Sfx_AA:                                                        ; Offset_0x0FF010
+Sfx_AA:                                                        ; Offset_0x0FF1A5
                 incbin  'data\sounds\sfx_AA.snd'
-Sfx_AB:                                                        ; Offset_0x0FF051
+Sfx_AB:                                                        ; Offset_0x0FF1E6
                 incbin  'data\sounds\sfx_AB.snd'
-Sfx_AC:                                                        ; Offset_0x0FF070
+Sfx_AC:                                                        ; Offset_0x0FF205
                 incbin  'data\sounds\sfx_AC.snd'
-Sfx_AD:                                                        ; Offset_0x0FF0A4
+Sfx_AD:                                                        ; Offset_0x0FF239
                 incbin  'data\sounds\sfx_AD.snd'
-Sfx_AE:                                                        ; Offset_0x0FF0DA
+Sfx_AE:                                                        ; Offset_0x0FF26F
                 incbin  'data\sounds\sfx_AE.snd'
-Sfx_AF:                                                        ; Offset_0x0FF124
+Sfx_AF:                                                        ; Offset_0x0FF2B9
                 incbin  'data\sounds\sfx_AF.snd'
-Sfx_B0:                                                        ; Offset_0x0FF151
+Sfx_B0:                                                        ; Offset_0x0FF2E6
                 incbin  'data\sounds\sfx_B0.snd'
-Sfx_B1:                                                        ; Offset_0x0FF182
+Sfx_B1:                                                        ; Offset_0x0FF317
                 incbin  'data\sounds\sfx_B1.snd'
-Sfx_B2:                                                        ; Offset_0x0FF1AE
+Sfx_B2:                                                        ; Offset_0x0FF343
                 incbin  'data\sounds\sfx_B2.snd'
-Sfx_B3:                                                        ; Offset_0x0FF1FD
+Sfx_B3:                                                        ; Offset_0x0FF392
                 incbin  'data\sounds\sfx_B3.snd'
-Sfx_B4:                                                        ; Offset_0x0FF22E
+Sfx_B4:                                                        ; Offset_0x0FF3C3
                 incbin  'data\sounds\sfx_B4.snd'
-Sfx_B5:                                                        ; Offset_0x0FF289
+Sfx_B5:                                                        ; Offset_0x0FF41E
                 incbin  'data\sounds\sfx_B5.snd'
-Sfx_B6:                                                        ; Offset_0x0FF29E
+Sfx_B6:                                                        ; Offset_0x0FF433
                 incbin  'data\sounds\sfx_B6.snd'
-Sfx_B7:                                                        ; Offset_0x0FF2BB
+Sfx_B7:                                                        ; Offset_0x0FF450
                 incbin  'data\sounds\sfx_B7.snd'
-Sfx_B8:                                                        ; Offset_0x0FF2F6
+Sfx_B8:                                                        ; Offset_0x0FF48B
                 incbin  'data\sounds\sfx_B8.snd'
-Sfx_B9:                                                        ; Offset_0x0FF313
+Sfx_B9:                                                        ; Offset_0x0FF4A8
                 incbin  'data\sounds\sfx_B9.snd'
-Sfx_BA:                                                        ; Offset_0x0FF35D
+Sfx_BA:                                                        ; Offset_0x0FF4F2
                 incbin  'data\sounds\sfx_BA.snd'
-Sfx_BB:                                                        ; Offset_0x0FF385
+Sfx_BB:                                                        ; Offset_0x0FF51A
                 incbin  'data\sounds\sfx_BB.snd'
-Sfx_BC:                                                        ; Offset_0x0FF3B0
+Sfx_BC:                                                        ; Offset_0x0FF545
                 incbin  'data\sounds\sfx_BC.snd'
-Sfx_BD:                                                        ; Offset_0x0FF3F1
+Sfx_BD:                                                        ; Offset_0x0FF586
                 incbin  'data\sounds\sfx_BD.snd'
-Sfx_BE:                                                        ; Offset_0x0FF444
+Sfx_BE:                                                        ; Offset_0x0FF5D9
                 incbin  'data\sounds\sfx_BE.snd'
-Sfx_BF:                                                        ; Offset_0x0FF47E
+Sfx_BF:                                                        ; Offset_0x0FF613
                 incbin  'data\sounds\sfx_BF.snd'
-Sfx_C0:                                                        ; Offset_0x0FF4F0
+Sfx_C0:                                                        ; Offset_0x0FF685
                 incbin  'data\sounds\sfx_C0.snd'
-Sfx_C1:                                                        ; Offset_0x0FF51E
+Sfx_C1:                                                        ; Offset_0x0FF6B3
                 incbin  'data\sounds\sfx_C1.snd'
-Sfx_C2:                                                        ; Offset_0x0FF558
+Sfx_C2:                                                        ; Offset_0x0FF6ED  
                 incbin  'data\sounds\sfx_C2.snd'
-Sfx_C3:                                                        ; Offset_0x0FF569
+Sfx_C3:                                                        ; Offset_0x0FF6FE  
                 incbin  'data\sounds\sfx_C3.snd'
-Sfx_C4:                                                        ; Offset_0x0FF5E3
+Sfx_C4:                                                        ; Offset_0x0FF778  
                 incbin  'data\sounds\sfx_C4.snd'
-Sfx_C5:                                                        ; Offset_0x0FF60B
+Sfx_C5:                                                        ; Offset_0x0FF7A0  
                 incbin  'data\sounds\sfx_C5.snd'
-Sfx_C6:                                                        ; Offset_0x0FF672
+Sfx_C6:                                                        ; Offset_0x0FF807 
                 incbin  'data\sounds\sfx_C6.snd'
-Sfx_C7:                                                        ; Offset_0x0FF69A
+Sfx_C7:                                                        ; Offset_0x0FF82F
                 incbin  'data\sounds\sfx_C7.snd'
-Sfx_C8:                                                        ; Offset_0x0FF6C8
+Sfx_C8:                                                        ; Offset_0x0FF85D
                 incbin  'data\sounds\sfx_C8.snd'
-Sfx_C9:                                                        ; Offset_0x0FF6D9
+Sfx_C9:                                                        ; Offset_0x0FF86E
                 incbin  'data\sounds\sfx_C9.snd'
-Sfx_CA:                                                        ; Offset_0x0FF706
+Sfx_CA:                                                        ; Offset_0x0FF89B
                 incbin  'data\sounds\sfx_CA.snd'
-Sfx_CB:                                                        ; Offset_0x0FF733
+Sfx_CB:                                                        ; Offset_0x0FF8C8
                 incbin  'data\sounds\sfx_CB.snd'
-Sfx_CC:                                                        ; Offset_0x0FF766
+Sfx_CC:                                                        ; Offset_0x0FF8FB  
                 incbin  'data\sounds\sfx_CC.snd'
-Sfx_CD:                                                        ; Offset_0x0FF7A0
+Sfx_CD:                                                        ; Offset_0x0FF935 
                 incbin  'data\sounds\sfx_CD.snd'
-Sfx_CE:                                                        ; Offset_0x0FF7AD
+Sfx_CE:                                                        ; Offset_0x0FF942  
                 incbin  'data\sounds\sfx_CE.snd'
-Sfx_CF:                                                        ; Offset_0x0FF7C2
+Sfx_CF:                                                        ; Offset_0x0FF957  
                 incbin  'data\sounds\sfx_CF.snd'
-Sfx_D0:                                                        ; Offset_0x0FF7F9
+Sfx_D0:                                                        ; Offset_0x0FF98E  
                 incbin  'data\sounds\sfx_D0.snd'
-Sfx_D1:                                                        ; Offset_0x0FF82C
+Sfx_D1:                                                        ; Offset_0x0FF9C1  
                 incbin  'data\sounds\sfx_D1.snd'
-Sfx_D2:                                                        ; Offset_0x0FF865
+Sfx_D2:                                                        ; Offset_0x0FF9FA   
                 incbin  'data\sounds\sfx_D2.snd'
-Sfx_D3:                                                        ; Offset_0x0FF8A2
+Sfx_D3:                                                        ; Offset_0x0FFA37   
                 incbin  'data\sounds\sfx_D3.snd'
-Sfx_D4:                                                        ; Offset_0x0FF8E1
+Sfx_D4:                                                        ; Offset_0x0FFA76   
                 incbin  'data\sounds\sfx_D4.snd'
-Sfx_D5:                                                        ; Offset_0x0FF909
+Sfx_D5:                                                        ; Offset_0x0FFAB7   
                 incbin  'data\sounds\sfx_D5.snd'
-Sfx_D6:                                                        ; Offset_0x0FF933
+Sfx_D6:                                                        ; Offset_0x0FFAE1  
                 incbin  'data\sounds\sfx_D6.snd'
-Sfx_D7:                                                        ; Offset_0x0FF978
+Sfx_D7:                                                        ; Offset_0x0FFB26  
                 incbin  'data\sounds\sfx_D7.snd'
-Sfx_D8:                                                        ; Offset_0x0FF9A0
+Sfx_D8:                                                        ; Offset_0x0FFB4E  
                 incbin  'data\sounds\sfx_D8.snd'
-Sfx_D9:                                                        ; Offset_0x0FF9CA
+Sfx_D9:                                                        ; Offset_0x0FFB78   
                 incbin  'data\sounds\sfx_D9.snd'
-Sfx_DA:                                                        ; Offset_0x0FF9F7
+Sfx_DA:                                                        ; Offset_0x0FFBD1   
                 incbin  'data\sounds\sfx_DA.snd'
-Sfx_DB:                                                        ; Offset_0x0FFA24
+Sfx_DB:                                                        ; Offset_0x0FFBFE  
                 incbin  'data\sounds\sfx_DB.snd'
-Sfx_DC:                                                        ; Offset_0x0FFA58
+Sfx_DC:                                                        ; Offset_0x0FFC32 
                 incbin  'data\sounds\sfx_DC.snd'
-Sfx_DD:                                                        ; Offset_0x0FFA9F
+Sfx_DD:                                                        ; Offset_0x0FFC79
                 incbin  'data\sounds\sfx_DD.snd'
-Sfx_DE:                                                        ; Offset_0x0FFAC7
+Sfx_DE:                                                        ; Offset_0x0FFCA1
                 incbin  'data\sounds\sfx_DE.snd'
-Sfx_DF:                                                        ; Offset_0x0FFB01
+Sfx_DF:                                                        ; Offset_0x0FFCDB 
                 incbin  'data\sounds\sfx_DF.snd'
-Sfx_E0:                                                        ; Offset_0x0FFB9D
+Sfx_E0:                                                        ; Offset_0x0FFD77  
                 incbin  'data\sounds\sfx_E0.snd'
-Sfx_E1:                                                        ; Offset_0x0FFBD8
+Sfx_E1:                                                        ; Offset_0x0FFDB2 
                 incbin  'data\sounds\sfx_E1.snd'
-Sfx_E2:                                                        ; Offset_0x0FFC3F
+Sfx_E2:                                                        ; Offset_0x0FFE0F  
                 incbin  'data\sounds\sfx_E2.snd'
-Sfx_E3:                                                        ; Offset_0x0FFC76
+Sfx_E3:                                                        ; Offset_0x0FFE46  
                 incbin  'data\sounds\sfx_E3.snd'
-Sfx_E4:                                                        ; Offset_0x0FFCA5
+Sfx_E4:                                                        ; Offset_0x0FFE75   
                 incbin  'data\sounds\sfx_E4.snd'
-Sfx_E5:                                                        ; Offset_0x0FFCCD
+Sfx_E5:                                                        ; Offset_0x0FFE9D   
                 incbin  'data\sounds\sfx_E5.snd'
-Sfx_E6:                                                        ; Offset_0x0FFCEE
+Sfx_E6:                                                        ; Offset_0x0FFEBE     
                 incbin  'data\sounds\sfx_E6.snd'
-Sfx_E7:                                                        ; Offset_0x0FFD28
+Sfx_E7:                                                        ; Offset_0x0FFEF8    
                 incbin  'data\sounds\sfx_E7.snd'
-Sfx_E8:                                                        ; Offset_0x0FFD84
+Sfx_E8:                                                        ; Offset_0x0FFF19    
                 incbin  'data\sounds\sfx_E8.snd'
-Sfx_E9:                                                        ; Offset_0x0FFDAE
+Sfx_E9:                                                        ; Offset_0x0FFF43     
                 incbin  'data\sounds\sfx_E9.snd'
+Sfx_EA:                                                        ; Offset_0x0FFF80      
+                incbin  'data\sounds\sfx_EA.snd'
+Sfx_EB:                                                        ; Offset_0x0FFFAB   
+                incbin  'data\sounds\sfx_EB.snd'                                                                                                                                                                                                      
 ;-------------------------------------------------------------------------------                                                    
-;                cnop    $00000000, $000FFFFE, $00000000
-                 align   $FFFFE
-                 dc.w    $0000                
+
 ;===============================================================================
 ; Rotina para carregar o driver de som 
 ; <<<-
